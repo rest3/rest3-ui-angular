@@ -1,6 +1,6 @@
-# rest3-angular - A Front End for rest3, S3-like OSS Container Object Store
+# rest3-angular - A Front End for rest3
 
-## Front-End for our [rest3API](https://github.com/truncj/rest3API)
+## Requires [rest3API](https://github.com/truncj/rest3API)
 
 We have preconfigured `npm` to automatically run `bower` so we can simply do:
 
