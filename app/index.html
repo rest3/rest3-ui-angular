@@ -9,33 +9,76 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <style>
+  /* Remove the navbar's default margin-bottom and rounded borders */
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  .
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+  </style>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
+<body style="margin:40px">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">rest3</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Buckets</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">rest3
+                <small>OSS Container Object Store</small>
+            </h1>
+        </div>
+    </div>
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div ng-view></div>
+</div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="config.route.js"></script>
+  <script src="config.js"></script>
+  <script src="landing/landing.js"></script>
+  <script src="landing/landing.service.js"></script>
+  <script src="bucket/bucket.js"></script>
+  <script src="bucket/bucket.service.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

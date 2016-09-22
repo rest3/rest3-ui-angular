@@ -1,0 +1,37 @@
+<div class="main" ng-controller="Landing1Ctrl as vm">
+    <!-- New Bucket Form -->
+    <div class="row bottom-buffer">
+        <div class="col-lg-4 pull-right">
+            <div class="input-group" id="new-bucket">
+              <input type="text" class="form-control" ng-model="vm.newBucketName" placeholder="Create New Bucket" name="bucket">
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="vm.newBucket(vm.newBucketName)">Create</button>
+              </span>
+            </div>
+        </div>
+    </div>
+	<div class="container-fluid bg-3 text-center">
+	  <h3>Bucket Landing</h3><br>
+	  <div class="row">
+	    <div class="col-md-3 portfolio-item" ng-repeat="bucket in vm.buckets">
+            <a href="/#/buckets/{{bucket['name']}}">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-12 text-left">
+                                <div class="huge"><h2>{{bucket['name']}}</h2></div>
+                                <div>{{bucket['length']}} objects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/#!/">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            	<button class="pull-right glyphicon glyphicon-trash" ng-click="vm.deleteBucket(bucket['name'])"></button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </a>
+	</div><br>
+</div>
