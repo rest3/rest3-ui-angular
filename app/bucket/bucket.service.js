@@ -8,6 +8,7 @@
 	    service.deleteFile = deleteFile
 	    service.getFiles = getFiles
 	    service.uploadFile = uploadFile
+	    service.downloadFile = downloadFile
 
 		return service
 
@@ -18,7 +19,7 @@
 
 
 	    function deleteFile(bucket, file){
-	    	return $http.delete(config.api_endpoint + config.api_buckets + '/' + bucket + "/" + file)
+	    	return $http.delete(config.api_endpoint + config.api_buckets + '/' + bucket + '/' + file)
 	   }
 
 	    function uploadFile(bucket, file){
@@ -27,6 +28,10 @@
                 url: config.api_endpoint + config.api_upload,
                 data:{file:file,bucket:bucket}
             })
+	   }
+
+	   	function downloadFile(bucket, file){
+            window.open(config.api_endpoint + config.api_download + '/' + bucket + '/' + file)
 	   }
 
 	}

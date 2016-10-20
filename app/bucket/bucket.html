@@ -13,7 +13,7 @@
             <tr ng-repeat="file in vm.files">
               <td>
                 <button class="pull-right glyphicon glyphicon-trash" ng-click="vm.deleteFile(vm.bucket, file)"></button>
-                <a id="download" href="#">{{file}}</a>
+                <a id="download" ng-click="vm.downloadFile(vm.bucket, file)">{{file}}</a>
               </td>
             </tr>
         </tbody>

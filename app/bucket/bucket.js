@@ -12,6 +12,7 @@ angular.module('myApp.bucket', ['ngRoute','myApp.bucket.service'])
         vm.bucket = $route.current.params.bucket
         vm.deleteFile = deleteFile
         vm.uploadFile = uploadFile
+        vm.downloadFile = bucketService.downloadFile
 
    		activate()
 
