@@ -5,13 +5,13 @@
             <div class="input-group" id="new-bucket">
               <input type="text" class="form-control" ng-model="vm.newBucketName" placeholder="Create New Bucket" name="bucket">
               <span class="input-group-btn">
-                <button class="btn btn-default" ng-click="vm.newBucket(vm.newBucketName)">Create</button>
+                <button class="btn btn-outline-secondary" ng-click="vm.newBucket(vm.newBucketName)">Create</button>
               </span>
             </div>
         </div>
     </div>
 	<div class="container-fluid bg-3 text-center">
-	  <h3>Bucket Landing</h3><br>
+	  <h3>Storage Buckets</h3><br>
 	  <div class="row">
 	    <div class="col-md-3 portfolio-item" ng-repeat="bucket in vm.buckets">
             <a href="/#/buckets/{{bucket['name']}}">

@@ -1,7 +1,6 @@
 version: '2'
 services:
   rest3-ui:
-    build: .
     image: ielab/rest3-ui
     ports:
       - "5000:5000"
@@ -9,14 +8,13 @@ services:
       - rest3-api
     restart: always
   rest3-api:
-    build: .
     image: ielab/rest3-api
     ports:
-      - "8080:8080"
+      - "5001:5001"
     links:
-      - rest3-redis
+      - redis
     restart: always
-  rest3-redis:
+  redis:
     image: redis
     volumes:
       - /opt/redis:/data

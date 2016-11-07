@@ -15,6 +15,11 @@
             controller: 'Bucket1Ctrl',
             controllerAs: 'vm'
         });
+        $routeProvider.when('/addons', {
+            templateUrl: 'addons/addons_landing.html',
+            controller: 'AddonsLandingCtrl',
+            controllerAs: 'vm'
+        });
 
         $routeProvider.otherwise({ redirectTo: '/' });        
 

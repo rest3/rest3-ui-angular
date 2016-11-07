@@ -1,0 +1,19 @@
+<div class="main" ng-controller="AddonsLandingCtrl as vm">
+    <!-- New Bucket Form -->
+	<div class="container-fluid bg-3 text-center">
+	  <h3>Addons</h3><br>
+	  <div class="row">
+        <div class="col-md-4 portfolio-item" ng-click="vm.downloadFile('Addons', fileName)" ng-repeat="(fileName, addonName) in vm.addonFiles">
+            <div class="card">
+              <img class="card-img-top" src="{{vm.api_endpoint}}/rest3/api/v1/download/Thumbnails/{{fileName}}.png" alt="Card image cap">
+                <div class="card-img-overlay">
+                    <!-- <h4 class="card-title" style="color:white;padding-top:25%" ">{{addonName}}</h4> -->
+                </div>
+              <div class="card-block">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#"  class="btn btn-primary">Download</a>
+              </div>
+            </div>
+        </div>
+	</div><br>
+</div>

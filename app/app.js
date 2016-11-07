@@ -6,6 +6,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.landing',
   'myApp.landing.service',
+  'myApp.addonsLanding',
+  'myApp.addonsLanding.service',
   'myApp.bucket',
   'myApp.bucket.service',
   'myApp.version',
